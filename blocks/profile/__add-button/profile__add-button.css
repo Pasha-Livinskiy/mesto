@@ -1,0 +1,9 @@
+.profile__add-button {
+  background-image: url(/images/Rectangle.jpg);
+  background-repeat: no-repeat;
+  width: 151px;
+  height: 51px;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+}

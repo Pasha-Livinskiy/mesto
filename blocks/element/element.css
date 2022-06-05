@@ -1,0 +1,9 @@
+.element {
+  background-color: #fff;
+  border-radius: 10px;
+  box-sizing: border-box;
+  position: relative;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+}

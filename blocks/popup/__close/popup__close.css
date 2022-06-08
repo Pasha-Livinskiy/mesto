@@ -1,5 +1,5 @@
 .popup__close {
-  background-image: url(../../../images/Close.jpg);
+  background-image: url(../../../images/Close\ Icon.svg);
   position: absolute;
   right: -40px;
   top: -40px;
@@ -9,4 +9,9 @@
   align-self: center;
   padding: 0;
   border: 0;
+  cursor: pointer;
+}
+
+.popup__close.active {
+  pointer-events: all;
 }

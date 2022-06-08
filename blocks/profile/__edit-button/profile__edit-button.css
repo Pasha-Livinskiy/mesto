@@ -1,6 +1,5 @@
 .profile__edit-button {
-  border: 0;
-  background-image: url(../../../images/Rectangle\ \(1\).jpg);
+  background-image: url(../../../images/Vector\ \(2\).svg);
   background-repeat: no-repeat;
   background-color: transparent;
   width: 24px;
@@ -9,6 +8,9 @@
   padding: 0;
   cursor: pointer;
   transition: 0.3s ease;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  border: 1px solid white;
 }
 
 .profile__edit-button:hover {

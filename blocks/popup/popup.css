@@ -6,16 +6,11 @@
   left: 0;
   background-color: rgba(0, 0, 0, 0.8);
   opacity: 0;
-  visibility: hidden;
   transition: all 0.8s ease 0s;
+  visibility: hidden;
 }
 
-.popup_opened {
+.popup.active {
   opacity: 1;
   visibility: visible;
-}
-
-.popup.open .popup__content {
-  transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
-  opacity: 1;
 }

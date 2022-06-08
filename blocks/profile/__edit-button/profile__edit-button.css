@@ -1,11 +1,16 @@
 .profile__edit-button {
-  cursor: pointer;
   border: 0;
-  background-image: url(/images/Rectangle\ \(1\).jpg);
+  background-image: url(../../../images/Rectangle\ \(1\).jpg);
   background-repeat: no-repeat;
   background-color: transparent;
   width: 24px;
   height: 24px;
   align-self: center;
   padding: 0;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.profile__edit-button:hover {
+  opacity: 0.6;
 }

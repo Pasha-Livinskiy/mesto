@@ -1,3 +1,12 @@
 .popup__close {
-  background-image: url(/images/Close\ Icon.jpg);
+  background-image: url(../../../images/Close.jpg);
+  position: absolute;
+  right: -40px;
+  top: -40px;
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px;
+  align-self: center;
+  padding: 0;
+  border: 0;
 }

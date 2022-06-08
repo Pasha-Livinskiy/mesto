@@ -2,4 +2,9 @@
   background-color: #fff;
   color: black;
   max-width: 430px;
+  position: relative;
+  padding: 30px;
+  transition: all 0.8s ease 0s;
+  opacity: 0;
+  transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
 }

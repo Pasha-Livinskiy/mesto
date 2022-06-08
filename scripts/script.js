@@ -22,3 +22,20 @@ document.addEventListener('click', (e) => { // Вешаем обработчик
         popupBody.classList.remove('active'); // И с окна
     }
 });
+
+
+
+function qs(selector) {
+  return document.querySelector(selector);
+}
+
+function formSubmitHandler(evt) {
+  evt.preventDefault();
+  qs('.profile__name').textContent = qs('.popup__input').value;
+  qs('.profile__description').textContent = qs('.popup__input').value;
+  closeEditForm();
+}
+
+function closeEditForm() {}
+
+document.getElementById('submit').addEventListener('click', formSubmitHandler);

@@ -19,7 +19,7 @@ _Проект 'Mesto'_
 
  <img src="./images/zhuo-cheng-you-Y-TzM28dDhU-unsplash.jpg" width="200px" height= "250px">
 
- <img src="./images/yuyeung-lau-VOV0q44b7R4-unsplash (1).jpg" width="200px" height= "250px">
+ <img src="./images/yuyeung-lau-VOV0q44b7R4-unsplash.jpg" width="200px" height= "250px">
  
 Технологии
  <ul>

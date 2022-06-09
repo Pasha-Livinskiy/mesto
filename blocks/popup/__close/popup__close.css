@@ -10,8 +10,18 @@
   padding: 0;
   border: 0;
   cursor: pointer;
+  background-position: 50% 50%;
 }
 
 .popup__close.active {
   pointer-events: all;
+}
+
+@media screen and (max-width: 425px) {
+  .popup__close {
+    width: 20px;
+    height: 20px;
+    right: -25px;
+    top: -25px;
+  }
 }

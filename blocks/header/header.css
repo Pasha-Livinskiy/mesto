@@ -4,5 +4,11 @@
   width: 100%;
   margin: 0 auto 37px;
   padding: 45px 0 41px;
-  display: flex;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 1023px) {
+  .header {
+    padding: 28px 27px 31px;
+  }
 }

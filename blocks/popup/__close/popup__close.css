@@ -1,9 +1,9 @@
 .popup__close {
   background-image: url(../../../images/Close\ Icon.svg);
-  position: absolute;
   right: -40px;
   top: -40px;
-  background-repeat: no-repeat;
+  position: absolute;
+  background-size: contain;
   width: 32px;
   height: 32px;
   align-self: center;
@@ -11,9 +11,10 @@
   border: 0;
   cursor: pointer;
   background-position: 50% 50%;
+  transition: all .1s linear;
 }
 
-.popup__close.active {
+.popup__close.popup_opened{
   pointer-events: all;
 }
 
@@ -21,7 +22,7 @@
   .popup__close {
     width: 20px;
     height: 20px;
-    right: -25px;
-    top: -25px;
+    right: 0;
+    top: -36px;
   }
 }

@@ -10,7 +10,7 @@
 
 @media screen and (max-width: 425px) {
   .profile__info {
-    row-gap: 14px;
-    column-gap: 16px;
+    row-gap: 10px;
+    column-gap: 7px;
   }
 }

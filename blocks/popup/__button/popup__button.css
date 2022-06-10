@@ -7,11 +7,15 @@
   align-items: center;
   justify-content: center;
   color: #fff;
-  font-size: 18px;
   border: 2px solid #faf7f7;
   background: #000;
   cursor: pointer;
-  text-transform: uppercase;
+  transition: all .1s linear;
+  background-size: contain;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
 }
 
     

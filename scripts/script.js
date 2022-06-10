@@ -1,41 +1,44 @@
-let popup = document.querySelector('.popup');
-let popupBody = document.querySelector('.popup__body'); 
-let popupLinkButtons = document.querySelectorAll('.popup-link'); 
-let closePopupButton = document.querySelector('.close-popup'); 
-
-popupLinkButtons.forEach((button) => { 
-    button.addEventListener('click', (e) => {
-        e.preventDefault(); 
-        popup.classList.add('active'); 
-        popupBody.classList.add('active');
-    })
-});
-
-closePopupButton.addEventListener('click',() => { 
-    popup.classList.remove('active'); 
-    popupBody.classList.remove('active'); 
-});
-
-document.addEventListener('click', (e) => { 
-    if(e.target === popup) { 
-        popup.classList.remove('active'); 
-        popupBody.classList.remove('active'); 
-    }
-});
+const popup = document.querySelector('.popup');
+const profileEditButton = document.querySelector('.profile__edit-button'); 
+const closePopupButton = document.querySelector('.close-popup'); 
+const inputName = document.querySelectorAll('#input-name');
+const inputJob = document.querySelectorAll('#input-job');
+const profileName = document.querySelector('.profile__name');
+const profileDescription = document.querySelector('.profile__description');
+const popupBody = document.querySelector('.popup__body');
 
 
+function popupOpen() {
+    if (popup.classList.contains('popup_opened')) {
+       (popup.classList.toggle('popup_opened'))
+    } else {
+        popup.classList.toggle('popup_opened');
+        inputName[0].value = profileName.textContent;
+        inputJob[0].value = profileDescription.textContent;
+    };
+};
 
-function qs(selector) {
-  return document.querySelector(selector);
-}
+function popupClose() {
+    popup.classList.remove('popup_opened')
+};
 
 function formSubmitHandler(evt) {
-  evt.preventDefault();
-  qs('.profile__name').textContent = qs('.popup__input').value;
-  qs('.profile__description').textContent = qs('.popup__input').value;
-  closeEditForm();
-}
+    evt.preventDefault();
+    profileName.textContent = inputName[0].value;
+    profileDescription.textContent = inputJob[0].value;
+};
 
-function closeEditForm() {}
+profileEditButton.addEventListener('click', popupOpen);
+closePopupButton.addEventListener('click', popupClose);
+popupBody.addEventListener('submit', formSubmitHandler);
+popupBody.addEventListener('click', formSubmitHandler);
 
-document.getElementById('submit').addEventListener('click', formSubmitHandler);
+
+
+
+
+
+
+
+
+

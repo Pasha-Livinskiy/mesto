@@ -2,16 +2,26 @@
   background-image: url(../../../images/Vector\ \(2\).svg);
   background-repeat: no-repeat;
   background-color: transparent;
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   align-self: center;
   padding: 0;
   cursor: pointer;
   transition: 0.3s ease;
   background-position: 50% 50%;
   border: 1px solid white;
+  background-size: contain;
+  margin: 5px 0 0;
 }
 
 .profile__edit-button:hover {
   opacity: 0.6;
+}
+
+@media screen and (max-width: 426px) {
+  .profile__edit-button {
+    width: 282px;
+    width: 18px;
+    height: 18px;
+  }
 }

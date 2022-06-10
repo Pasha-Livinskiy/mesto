@@ -5,12 +5,12 @@
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-size: 18px;
   border: 2px solid #fff;
   border-radius: 2px;
   padding: 0;
   transition: all .1s linear;
   box-sizing: border-box;
+  background-size: 18px; 
 }
 
 .profile__add-button:hover {

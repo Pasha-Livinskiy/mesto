@@ -7,8 +7,5 @@
   width: 100%;
   transition: all 0.8s ease 0s;
   box-sizing: border-box;
-}
-
-.popup__body.popup_opened {
-  transition: 0.5s all;
+  margin: 0;
 }

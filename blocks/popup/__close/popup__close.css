@@ -13,10 +13,11 @@
   cursor: pointer;
   background-position: 50% 50%;
   transition: all .1s linear;
+  border-radius: 5px;
 }
 
-.popup__close.popup_opened{
-  pointer-events: all;
+.popup__close:hover {
+  opacity: 0.5;
 }
 
 @media screen and (max-width: 425px) {

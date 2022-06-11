@@ -9,6 +9,13 @@
   box-sizing: border-box;
   position: fixed;
 }
+
+@media screen and (max-width: 550px) {
+  .popup__container {
+    max-width: 350px;
+    padding: 30px 28px;
+  }
+}
   
 @media screen and (max-width: 480px) {
   .popup__container {
@@ -16,3 +23,4 @@
     padding: 25px 22px;
   }
 }
+

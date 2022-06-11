@@ -2,15 +2,15 @@
   background-image: url(../../../images/Vector\ \(2\).svg);
   background-repeat: no-repeat;
   background-color: transparent;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   align-self: center;
   padding: 0;
   cursor: pointer;
   transition: 0.3s ease;
   background-position: 50% 50%;
   border: 1px solid white;
-  background-size: contain;
+  background-size: 10px;
   margin: 5px 0 0;
 }
 
@@ -23,5 +23,6 @@
     width: 282px;
     width: 18px;
     height: 18px;
+    background-size: 8px;
   }
 }

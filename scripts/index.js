@@ -1,8 +1,8 @@
 const popup = document.querySelector('.popup');
 const profileEditButton = document.querySelector('.profile__edit-button'); 
 const closePopup = document.querySelector('.popup__close'); 
-const popupBodyInputName = document.querySelector('.popup__body_input-name');
-const popupBodyInputJob = document.querySelector('.popup__body_input-job');
+const popupInputName = document.querySelector('.popup__input-name');
+const popupInputJob = document.querySelector('.popup__input-job');
 const profileName = document.querySelector('.profile__name');
 const profileDescription = document.querySelector('.profile__description');
 const popupBody = document.querySelector('.popup__body');
@@ -14,8 +14,8 @@ function popupProfile() {
        (popup.classList.toggle('popup_opened'))
     } else {
         popup.classList.toggle('popup_opened');
-        popupBodyInputName.value = profileName.textContent;
-        popupBodyInputJob.value = profileDescription.textContent;
+        popupInputName.value = profileName.textContent;
+        popupInputJob.value = profileDescription.textContent;
         //document.addEventListener ('keyup', closeWithEsc);
     };
 };
@@ -27,8 +27,8 @@ function popupClose() {
 
 function formSubmitHandler(evt) {
     evt.preventDefault();
-    profileName.textContent = popupBodyInputName.value;
-    profileDescription.textContent = popupBodyInputJob.value;
+    profileName.textContent = popupInputName.value;
+    profileDescription.textContent = popupInputJob.value;
     popupClose()
 };
 

@@ -87,6 +87,19 @@
       </form>
     </div>
   </div>
+  <div id="newCard" class="popup">
+    <div class="popup__container">
+      <button type="button" class="popup__close"></button>
+      <h2 class="popup__title">Новое место</h2>
+      <form name="form-body" class="popup__body">
+        <input name="name" placeholder="Название" required maxlength="40" class="popup__input popup__input_type_name"
+          type="text">
+        <input name="job" placeholder="Ссылка на картинку" required maxlength="40"
+          class="popup__input popup__input_type_job" type="text">
+        <button class="popup__button" id="submit" type="submit">Создать</button>
+      </form>
+    </div>
+  </div>  
   <script src="scripts/index.js"></script>
 </body>
 </html>

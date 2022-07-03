@@ -27,79 +27,59 @@
     </section>
 
     <section class="element">
-      <ul class="element__table">
-        <li class="element__list">
-          <img src="./images/stephen-kong-uYFvKQ7DCRA-unsplash.jpg" alt="!Уточка" class="element__img">
-          <div class="element__container">
-            <h2 class="element__title">Хохотушка</h2>
-            <button type="button" class="element__like-button"></button>
-          </div>
-        </li>
-        <li class="element__list">
-          <img src="./images/devin-avery-xbuEndq7fLw-unsplash.jpg" alt="!Смайлик" class="element__img">
-          <div class="element__container">
-            <h2 class="element__title">Смайлик</h2>
-            <button type="button" class="element__like-button"></button>
-          </div>
-        </li>
-        <li class="element__list">
-          <img src="./images/yuyeung-lau-VOV0q44b7R4-unsplash.jpg" alt="!Ещё Смайлик" class="element__img">
-          <div class="element__container">
-            <h2 class="element__title">Ещё Смайлик</h2>
-            <button type="button" class="element__like-button"></button>
-          </div>
-        </li>
-        <li class="element__list">
-          <img src="./images/lidya-nada-tXz6g8JYYoI-unsplash.jpg" alt="!Снова смайлик" class="element__img">
-          <div class="element__container">
-            <h2 class="element__title">Снова Смайлик</h2>
-            <button type="button" class="element__like-button"></button>
-          </div>
-        </li>
-        <li class="element__list">
-          <img src="./images/zhuo-cheng-you-Y-TzM28dDhU-unsplash.jpg" alt="!И Снова смайлик" class="element__img">
-          <div class="element__container">
-            <h2 class="element__title">И снова Смайликggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg</h2>
-            <button type="button" class="element__like-button"></button>
-          </div>
-        </li>
-        <li class="element__list">
-          <img src="./images/count-chris-hQNFPZK8F80-unsplash.jpg" alt="!Больше Смайликов" class="element__img">
-          <div class="element__container">
-            <h2 class="element__title">Смайликиии</h2>
-            <button type="button" class="element__like-button"></button>
-          </div>
-        </li>
-      </ul>
+      <ul class="element__table"></ul>
     </section>
     <footer class="footer">
       <p class="footer__copyright">© 2022 Mesto Russia</p>
     </footer>
   </main>
-  <div id="popup" class="popup">
+
+  <template class="element-template">
+    <li class="element__list" id="element-list">
+      <img id="image"  class="element__img">
+      <button class="element__trash" type="button" value="remove" id='disabled'></button>
+      <div class="element__container">
+        <h2 class="element__title"></h2>
+        <button type="button" class="element__like-button"></button>
+      </div>
+    </li>
+  </template>
+
+  <div id="profile-edit" class="popup">
     <div class="popup__container">
       <button type="button" class="popup__close"></button>
       <h2 class="popup__title">Редактировать профиль</h2>
       <form name="form-body" class="popup__body">
-        <input name="name" placeholder="Имя (только буквы)" required maxlength="40" class="popup__input popup__input_type_name" type="text">
-        <input name="job" placeholder="Профессия (только буквы)" required maxlength="40" class="popup__input popup__input_type_job" type="text">
+        <input id="name-profile" name="name" placeholder="Имя (только буквы)" required maxlength="40"
+          class="popup__input popup__input_type_name" type="text">
+        <input id="job-profile" name="job" placeholder="Профессия (только буквы)" required maxlength="40"
+          class="popup__input popup__input_type_job" type="text">
         <button class="popup__button" id="submit" type="submit">Сохранить</button>
       </form>
     </div>
-  </div>
-  <div id="newCard" class="popup">
+  </div>  
+
+  <div id="new-card" class="popup">
     <div class="popup__container">
       <button type="button" class="popup__close"></button>
       <h2 class="popup__title">Новое место</h2>
       <form name="form-body" class="popup__body">
-        <input name="name" placeholder="Название" required maxlength="40" class="popup__input popup__input_type_name"
+        <input id="name-card" name="name" placeholder="Название" class="popup__input popup__input_type_name"
           type="text">
-        <input name="job" placeholder="Ссылка на картинку" required maxlength="40"
+        <input id="link-card" name="job" placeholder="Ссылка на картинку" required
           class="popup__input popup__input_type_job" type="text">
-        <button class="popup__button" id="submit" type="submit">Создать</button>
+        <button class="popup__button" id="create" type="submit">Создать</button>
       </form>
     </div>
-  </div>  
+  </div> 
+
+  <div id="enlarged-card" class="popup">
+    <div class="popup__enlarged">
+      <button type="button" class="popup__close"></button>
+      <img id="popup-image" class="popup__image" src="#" alt="Фото в попапе с карточкой!">
+      <p class="popup__image-subtitle"></p>
+    </div>
+  </div>
   <script src="scripts/index.js"></script>
 </body>
 </html>

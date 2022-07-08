@@ -12,5 +12,6 @@
   .profile__info {
     row-gap: 10px;
     column-gap: 7px;
+    width: 250px;
   }
 }

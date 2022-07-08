@@ -19,11 +19,11 @@
         <img src="./images/javier-miranda-_Z3zrkOQEMY-unsplash.jpg" alt="!Аватар профиля" class="profile__avatar">
         <div class="profile__info">
           <h1 class="profile__name">Жак-Ив-Кусто</h1>
-          <button type="button" class="profile__edit-button"></button>
+          <button id="form-open" type="button" data-toggle="profile-edit" class="profile__edit-button"></button>
           <p class="profile__description">Хохотушка</p>
         </div>
       </div>
-      <button type="button" class="profile__add-button"></button>
+      <button id="new-popap" type="button" data-toggle="new-card" class="profile__add-button"></button>
     </section>
 
     <section class="element">
@@ -36,7 +36,7 @@
 
   <template class="element-template">
     <li class="element__list" id="element-list">
-      <img id="image"  class="element__img">
+      <img id="image"  class="element__img" alt="user_place">
       <button class="element__trash" type="button" value="remove" id='disabled'></button>
       <div class="element__container">
         <h2 class="element__title"></h2>
@@ -45,9 +45,9 @@
     </li>
   </template>
 
-  <div id="profile-edit" class="popup">
+  <div id="profile-edit" class="popup" data-target="one">
     <div class="popup__container">
-      <button type="button" class="popup__close"></button>
+      <button type="button" id="close-profile" class="popup__close"></button>
       <h2 class="popup__title">Редактировать профиль</h2>
       <form name="form-body" class="popup__body">
         <input id="name-profile" name="name" placeholder="Имя (только буквы)" required maxlength="40"
@@ -59,9 +59,9 @@
     </div>
   </div>  
 
-  <div id="new-card" class="popup">
+  <div id="new-card" class="popup" data-target="two">
     <div class="popup__container">
-      <button type="button" class="popup__close"></button>
+      <button type="button" id="close-newcard" class="popup__close"></button>
       <h2 class="popup__title">Новое место</h2>
       <form name="form-body" class="popup__body">
         <input id="name-card" name="name" placeholder="Название" class="popup__input popup__input_type_name"
@@ -73,10 +73,10 @@
     </div>
   </div> 
 
-  <div id="enlarged-card" class="popup">
+  <div id="enlarged-card" class="popup popup_type_image">
     <div class="popup__enlarged">
-      <button type="button" class="popup__close"></button>
-      <img id="popup-image" class="popup__image" src="#" alt="Фото в попапе с карточкой!">
+      <button type="button" id="close-img" class="popup__close"></button>
+      <img id="popup-image" class="popup__image" src="#" alt="user_place">
       <p class="popup__image-subtitle"></p>
     </div>
   </div>

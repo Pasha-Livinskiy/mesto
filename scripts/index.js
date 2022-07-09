@@ -3,6 +3,7 @@ const popupInputJob = document.querySelector('#job-profile');
 const profileName = document.querySelector('.profile__name');
 const profileDescription = document.querySelector('.profile__description');
 const popupFormProfile = document.querySelector('#form-body-profile');
+const pupupFormCard = document.querySelector('#form-body-newcard');
 const profileAddButton = document.querySelector('.profile__add-button');
 const profileEditButton = document.querySelector('.profile__edit-button');  
 const buttonCreate = document.querySelector('#create');
@@ -75,19 +76,33 @@ function createPlaceCard(item) {
   return columnElement; 
 }
 
-buttonCreate.addEventListener('click', function (evt) {
+/*buttonCreate.addEventListener('click', function (evt) {
   evt.preventDefault();
   const cardAdd = {name:titleCard.value, link:linkCard.value};
   elementTable.prepend(createPlaceCard(cardAdd));
   titleCard.value = '';
   linkCard.value = '';
   closePopup(newCard);
-});
+});*/
+
+function createCard(evt) {
+  evt.preventDefault();
+  const cardAdd = {name:titleCard.value, link:linkCard.value};
+  elementTable.prepend(createPlaceCard(cardAdd));
+  closePopup(newCard);
+  savingCard();
+}
+
+function savingCard(evt) {
+  titleCard.value = '';
+  linkCard.value = '';
+}
 
 function savingData(evt) {
   evt.preventDefault();
   popupInputName.value = profileName.textContent;
   popupInputJob.value = profileDescription.textContent;
+  openPopup(profileEdit);
 }
 
 function submitForm(evt) {
@@ -100,9 +115,6 @@ function submitForm(evt) {
 function openPopup(popup) {
   popup.classList.add('popup_opened');
 }
-profileEditButton.addEventListener('click', function () {
-  openPopup(profileEdit);
-});
 
 profileAddButton.addEventListener('click', function () {
   openPopup(newCard);
@@ -126,6 +138,8 @@ imgClose.addEventListener('click', function () {
 
 profileEditButton.addEventListener('click', savingData);
 popupFormProfile.addEventListener('submit', submitForm);
+buttonCreate.addEventListener('click', createCard);
+//pupupFormCard.addEventListener('submit', savingCard);
 
 
 

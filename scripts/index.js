@@ -89,13 +89,9 @@ function createCard(evt) {
   evt.preventDefault();
   const cardAdd = {name:titleCard.value, link:linkCard.value};
   elementTable.prepend(createPlaceCard(cardAdd));
+  const formCard = document.forms.form2;
   closePopup(newCard);
-  savingCard();
-}
-
-function savingCard(evt) {
-  titleCard.value = '';
-  linkCard.value = '';
+  formCard.reset();
 }
 
 function savingData(evt) {

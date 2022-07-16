@@ -9,6 +9,7 @@
   color: #fff;
   border: 2px solid #faf7f7;
   background: #000;
+  border-radius: 2px;
   cursor: pointer;
   transition: 0.3s ease;
   background-size: contain;
@@ -16,7 +17,6 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
-  border-radius: 2px;
 }
 
 .popup__button:hover {

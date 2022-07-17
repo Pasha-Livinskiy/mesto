@@ -3,7 +3,6 @@ const popupInputJob = document.querySelector('#job-profile');
 const profileName = document.querySelector('.profile__name');
 const profileDescription = document.querySelector('.profile__description');
 const popupFormProfile = document.querySelector('#form-body-profile');
-const pupupFormCard = document.querySelector('#form-body-newcard');
 const profileAddButton = document.querySelector('.profile__add-button');
 const profileEditButton = document.querySelector('.profile__edit-button');  
 const buttonCreate = document.querySelector('#create');
@@ -110,6 +109,7 @@ function submitForm(evt) {
 
 function openPopup(popup) {
   popup.classList.add('popup_opened');
+  document.addEventListener ('keyup', closeWithEsc);
 }
 
 profileAddButton.addEventListener('click', function () {
@@ -118,6 +118,7 @@ profileAddButton.addEventListener('click', function () {
 
 function closePopup(popup) {
   popup.classList.remove('popup_opened');
+  document.removeEventListener('keyup', closeWithEsc);
 }
 
 profileClose.addEventListener('click', function () {
@@ -131,6 +132,23 @@ newCardClose.addEventListener('click', function () {
 imgClose.addEventListener('click', function () {
   closePopup(elementImage);
 });
+
+function targetClose (evt) {
+  if (evt.target.classList.contains('popup_opened')) {
+    closePopup(evt.target);
+  }
+}
+
+const closeWithEsc = (evt) => {
+  if (evt.key === 'Escape') {
+    const popupOpened = document.querySelector('.popup_opened');
+    closePopup(popupOpened);
+  }
+};
+
+profileEdit.addEventListener('click', targetClose);
+newCard.addEventListener('click', targetClose);
+elementImage.addEventListener('click', targetClose);
 
 profileEditButton.addEventListener('click', savingData);
 popupFormProfile.addEventListener('submit', submitForm);

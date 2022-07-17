@@ -15,4 +15,5 @@
 
 .popup__input:focus {
   outline: none;
+  border-bottom-color: #007DFF;
 }

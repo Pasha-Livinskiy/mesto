@@ -5,7 +5,6 @@ const profileDescription = document.querySelector('.profile__description');
 const popupFormProfile = document.querySelector('#form-body-profile');
 const profileAddButton = document.querySelector('.profile__add-button');
 const profileEditButton = document.querySelector('.profile__edit-button');  
-const buttonCreate = document.querySelector('#create');
 const profileEdit = document.querySelector('#profile-edit');
 const newCard = document.querySelector('#new-card');
 const elementTable = document.querySelector('.element__table');
@@ -18,6 +17,7 @@ const newCardClose = document.querySelector('#close-newcard');
 const imgClose = document.querySelector('#close-img');
 const popupImageSubtitle = document.querySelector('.popup__image-subtitle');
 const modalImage = document.querySelector('.popup__image');
+const formCard = document.forms.form2;
 
 const initialCards = [
   {
@@ -75,20 +75,10 @@ function createPlaceCard(item) {
   return columnElement; 
 }
 
-/*buttonCreate.addEventListener('click', function (evt) {
-  evt.preventDefault();
-  const cardAdd = {name:titleCard.value, link:linkCard.value};
-  elementTable.prepend(createPlaceCard(cardAdd));
-  titleCard.value = '';
-  linkCard.value = '';
-  closePopup(newCard);
-});*/
-
 function createCard(evt) {
   evt.preventDefault();
   const cardAdd = {name:titleCard.value, link:linkCard.value};
   elementTable.prepend(createPlaceCard(cardAdd));
-  const formCard = document.forms.form2;
   closePopup(newCard);
   formCard.reset();
 }
@@ -110,6 +100,15 @@ function submitForm(evt) {
 function openPopup(popup) {
   popup.classList.add('popup_opened');
   document.addEventListener ('keyup', closeWithEsc);
+  eventDispatch();
+}
+
+function eventDispatch() {
+  const inputEvent = new Event('input');
+  const inputForm = document.querySelectorAll('.popup__input');
+  inputForm.forEach(input => {
+    input.dispatchEvent(inputEvent);
+  });
 }
 
 profileAddButton.addEventListener('click', function () {
@@ -152,8 +151,7 @@ elementImage.addEventListener('click', targetClose);
 
 profileEditButton.addEventListener('click', savingData);
 popupFormProfile.addEventListener('submit', submitForm);
-buttonCreate.addEventListener('click', createCard);
-//pupupFormCard.addEventListener('submit', savingCard);
+formCard.addEventListener('submit', createCard);
 
 
 

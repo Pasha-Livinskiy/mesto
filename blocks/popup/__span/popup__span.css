@@ -1,34 +1,40 @@
+
+
 .popup__span {
   font-size: 16px;
-    line-height: 19px;
-    color: #979797;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    -webkit-transform: translateY(-50%) scale(1);
-    -moz-transform: translateY(-50%) scale(1);
-    -ms-transform: translateY(-50%) scale(1);
-    -o-transform: translateY(-50%) scale(1);
-    transform: translateY(-50%) scale(1);
-    -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -ms-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s;
-    pointer-events: none;
+  line-height: 19px;
+  color: #979797;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%) scale(1);
+  -moz-transform: translateY(-50%) scale(1);
+  -ms-transform: translateY(-50%) scale(1);
+  -o-transform: translateY(-50%) scale(1);
+  transform: translateY(-50%) scale(1);
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  pointer-events: none;
 }
 
-.popup__input:focus {
+.popup__input:hover {
+  border-bottom-color: #000;
+}
+
+.popup__input:focus{
   border-bottom-color: #007DFF;
 }
 
 .popup__input:focus + .popup__span,
 .popup__span_is-fixed {
-  font-size: 14px;
-  line-height: 16px;
-  -webkit-transform: translateY(-200%) scale(1);
-  -moz-transform: translateY(-200%) scale(1);
-  -ms-transform: translateY(-200%) scale(1);
-  -o-transform: translateY(-200%) scale(1);
-  transform: translateY(-200%) scale(1);
+  font-size: 12px;
+  line-height: 14px;
+  -webkit-transform: translateY(-160%) scale(1);
+  -moz-transform: translateY(-160%) scale(1);
+  -ms-transform: translateY(-160%) scale(1);
+  -o-transform: translateY(-160%) scale(1);
+  transform: translateY(-160%) scale(1);
 }

@@ -45,5 +45,5 @@
 @import url(../blocks/popup/__error/popup__error.css);
 @import url(../blocks/popup/__error/_active/popup__error_active.css);
 @import url(../blocks/popup/__label/popup__label.css);
-
+@import url(../blocks/popup/__span/popup__span.css);
 

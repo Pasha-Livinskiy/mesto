@@ -74,15 +74,14 @@ function createCard(evt) {
   const cardAdd = {name:titleCard.value, link:linkCard.value};
   elementTable.prepend(creatingNewCards(cardAdd));
   closePopup(newCard);
-  formCard.reset();
-  placeFormValidator.disableButton();
 }
 
-function savingData(evt) {
+function editProfile(evt) {
   evt.preventDefault();
   popupInputName.value = profileName.textContent;
   popupInputJob.value = profileDescription.textContent;
   openPopup(profileEdit);
+  profileFormValidator.clearValidation() 
 }
 
 /*function disableElementButton () {
@@ -104,7 +103,6 @@ function submitForm(evt) {
   profileName.textContent = popupInputName.value;
   profileDescription.textContent = popupInputJob.value;
   closePopup(profileEdit);
-  profileFormValidator.disableButton();
 }
 
 function openPopup(popup) {
@@ -114,6 +112,8 @@ function openPopup(popup) {
 
 profileAddButton.addEventListener('click', function () {
   openPopup(newCard);
+  placeFormValidator.clearValidation();
+  formCard.reset();
 });
 
 function closePopup(popup) {
@@ -150,7 +150,7 @@ profileEdit.addEventListener('click', targetClose);
 newCard.addEventListener('click', targetClose);
 elementImage.addEventListener('click', targetClose);
 
-profileEditButton.addEventListener('click', savingData);
+profileEditButton.addEventListener('click', editProfile);
 popupFormProfile.addEventListener('submit', submitForm);
 formCard.addEventListener('submit', createCard);
 

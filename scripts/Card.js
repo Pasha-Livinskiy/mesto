@@ -13,28 +13,34 @@ export class Card {
 
   generateCard() {
     this._element = this._getTemplate();
-    this._setEventListeners();
     this._element.querySelector('.element__title').textContent = this._name;
-    const elementImg = this._element.querySelector('.element__img');
-    elementImg.src = this._link;
-    elementImg.alt = `${this._name}`;
+    this._elementImg = this._element.querySelector('.element__img');
+    this._elementImg.src = this._link;
+    this._elementImg.alt = `${this._name}`;
+    this._setEventListeners()
     
     return this._element;
   }
 
+  _activeLike(evt) {
+    evt.target.classList.toggle('element__like-button_active'); 
+  }
+
   _setEventListeners() {
-    this._element.querySelector('.element__img').addEventListener('click', () => {
+    this._elementImg.addEventListener('click', () => {
       this._handleCardClick(this._name, this._link)
     });
 
-    this._element.querySelector('.element__like-button').addEventListener('click', (evt) => { 
-      evt.target.classList.toggle('element__like-button_active'); 
+    this._element.querySelector('.element__like-button').addEventListener('click', (evt) => {  
+      this._activeLike(evt);
     });
   
-    this._element.querySelector('.element__trash').addEventListener('click', function (evt) { 
-      const targetClick = evt.target; 
-      const elementTrash = targetClick.closest('.element__list'); 
-      elementTrash.remove(); 
+    this._element.querySelector('.element__trash').addEventListener('click', (evt) => { 
+      this._removeElement();
     });
+  }
+  
+  _removeElement() {
+   this._element.remove();
   }
 }  

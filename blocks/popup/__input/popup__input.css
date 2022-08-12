@@ -12,8 +12,6 @@
   line-height: 17px;
   color: #000000;
 }
-
 .popup__input:focus {
   outline: none;
-  border-bottom-color: #007DFF;
 }

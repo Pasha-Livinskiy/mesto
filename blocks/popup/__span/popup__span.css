@@ -24,10 +24,6 @@
   border-bottom-color: #000;
 }
 
-.popup__input:focus{
-  border-bottom-color: #007DFF;
-}
-
 .popup__input:focus + .popup__span,
 .popup__span_is-fixed {
   font-size: 12px;

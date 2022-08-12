@@ -1,6 +1,5 @@
 export class FormValidator {
   constructor(settings, formElement) {
-    this._formSelector = settings.formSelector;
     this._inputSelector = settings.inputSelector;
     this._submitButtonSelector = settings.submitButtonSelector;
     this._inactiveButtonClass = settings.inactiveButtonClass;
@@ -10,9 +9,8 @@ export class FormValidator {
     this._formElement = formElement;
     this._inputList = Array.from(this._formElement.querySelectorAll(this._inputSelector));
     this._buttonElement = this._formElement.querySelector(this._submitButtonSelector);
-    console.log(this._formElement);
   }
-  
+
   _showInputError(inputElement) {
     const errorElement = this._formElement.querySelector(`.${inputElement.id}-error`);
     inputElement.classList.add(this._inputErrorClass);
@@ -35,12 +33,12 @@ export class FormValidator {
     };
   }
 
-   disableButton() {
+   clearValidation() {
     this._inputList.forEach((inputElement) => {
       this._hideInputError(inputElement);
     });
     this._disableSubmitButton();
-    this._formElement.reset();
+    //this._formElement.reset();
   }
 
   _setEventListeners() {
@@ -55,11 +53,14 @@ export class FormValidator {
   }
 
   enableValidation() {
-    this._formElement.addEventListener('submit', (evt) => {
-      evt.preventDefault();
-    });
+    //this._formElement.addEventListener('submit', (evt) => {
+      //evt.preventDefault();
+    //});
     this._setEventListeners();
   }
+
+  
+
 
   _hasInvalidInput() {
     return this._inputList.some((inputElement) => {

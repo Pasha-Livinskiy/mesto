@@ -3,20 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="pages/index.css">
   <title>Место</title>
 </head>
-
 <body class="page">
 
   <header id="header" class="header">
-    <img src="./images/Logo-white.svg" alt="!Лого" class="header__logo">
+    <img src="<%=require('./images/Logo-white.svg')%>" alt="!Лого" class="header__logo">
   </header>
 
   <main class="content">
     <section class="profile"> 
       <div class="profile__card">
-        <img src="./images/javier-miranda-_Z3zrkOQEMY-unsplash.jpg" alt="!Аватар профиля" class="profile__avatar">
+        <img src="<%=require('./images/javier-miranda-_Z3zrkOQEMY-unsplash.jpg')%>" alt="!Аватар профиля" class="profile__avatar">
         <div class="profile__info">
           <h1 class="profile__name">Жак-Ив-Кусто</h1>
           <button id="form-open" type="button" data-toggle="profile-edit" class="profile__edit-button"></button>
@@ -55,7 +53,7 @@
           <span class="name-profile-error popup__error">Вы пропустили это поле.</span>
         </label>
         <label class="popup__label">
-          <input id="job-profile" name="job" placeholder="Профессия (только буквы)" minlength="2" maxlength="200" class="popup__input" type="text" autocomplete="off" required>
+          <input id="job-profile" name="about" placeholder="Профессия (только буквы)" minlength="2" maxlength="200" class="popup__input" type="text" autocomplete="off" required>
           <span class="job-profile-error popup__error">Вы пропустили это поле.</span>
         </label>
         <button class="popup__button" id="submit" type="submit">Сохранить</button>
@@ -73,7 +71,7 @@
           <span class="name-card-error popup__error">Вы пропустили это поле.</span>
         </label>
         <label class="popup__label">
-          <input id="link-card" name="job" placeholder="Ссылка на картинку" class="popup__input" type="url" autocomplete="off" required>
+          <input id="link-card" name="link" placeholder="Ссылка на картинку" class="popup__input" type="url" autocomplete="off" required>
           <span class="link-card-error popup__error">Введите адрес сайта.</span>
         </label>
         <button class="popup__button" id="create" type="submit">Создать</button>
@@ -88,6 +86,5 @@
       <p class="popup__image-subtitle"></p>
     </div>
   </div>
-  <script type="module" src="scripts/index.js"></script>
 </body>
 </html>

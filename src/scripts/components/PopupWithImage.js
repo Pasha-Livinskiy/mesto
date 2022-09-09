@@ -7,10 +7,10 @@ export default class PopupWithImage extends Popup {
     this._popupImgSignature = this._popupElement.querySelector('.popup__image-subtitle');
   }
 
-  open (name, link) {
-    this._popupImg.src = link; //устанавливаем ссылку
-    this._popupImg.alt = name; //устанавливаем альт
-    this._popupImgSignature.textContent = name;//устанавливаем подпись картинке
+  open (data) {
     super.open();
+    this._popupImg.src = data.link; 
+    this._popupImg.alt = data.name; 
+    this._popupImgSignature.textContent = `${data.name}`;//устанавливаем подпись картинке
   }
 }

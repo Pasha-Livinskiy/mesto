@@ -8,8 +8,12 @@ export const elementImage = document.querySelector('#enlarged-card');
 export const popupImageSubtitle = document.querySelector('.popup__image-subtitle');
 export const modalImage = document.querySelector('.popup__image');
 export const popupInputName = document.querySelector('#name-profile');
-elementImage, popupImageSubtitle, modalImage, popupInputName, popupInputJob, settings, initialCards
 export const popupInputJob = document.querySelector('#job-profile');
+export const profileAvatarEditButton = document.querySelector('.profile__avatar-edit-button');
+export const avatarEditPopup = document.querySelector('#update');
+export const spinner = document.querySelector('.spinner');
+export const cardDeletePopup = document.querySelector("#confirm");
+profileAvatarEditButton, avatarEditPopup, spinner, cardDeletePopup
 export const settings = {
   formSelector: '.popup__body',
   inputSelector: '.popup__input',
@@ -45,3 +49,4 @@ export const initialCards = [
     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
   }
 ];
+

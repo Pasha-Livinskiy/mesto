@@ -5,7 +5,6 @@ export default class PopupWithForm extends Popup {
     super(popupElement);
     this._submitForm = submitForm;
     this._formSubmit = this._formSubmit.bind(this);
-    //this._form = this._popupElement.querySelector(".popup__container");
     this._form = this._popupElement.querySelector(".popup__body")
     this._submitButton = this._form.querySelector(".popup__button");
     this._inputs = this._popupElement.querySelectorAll(".popup__input");
@@ -14,14 +13,13 @@ export default class PopupWithForm extends Popup {
   //* Сабмит формы
   _formSubmit(evt) {
     evt.preventDefault();
-    this._submitForm(this._getInputValues());
+    this._submitForm(this._getInputValues(), this._submitButton);
   }
 
   //* Метод сбора данных со всех полей формы
   _getInputValues() {
     const data = {};
     this._inputs.forEach((input) => {
-      console.log(input)
       data[input.name] = input.value;
     });
     return data;

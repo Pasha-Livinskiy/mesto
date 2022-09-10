@@ -13,7 +13,6 @@ export const profileAvatarEditButton = document.querySelector('.profile__avatar-
 export const avatarEditPopup = document.querySelector('#update');
 export const spinner = document.querySelector('.spinner');
 export const cardDeletePopup = document.querySelector("#confirm");
-profileAvatarEditButton, avatarEditPopup, spinner, cardDeletePopup
 export const settings = {
   formSelector: '.popup__body',
   inputSelector: '.popup__input',
@@ -23,30 +22,4 @@ export const settings = {
   errorClass: 'popup__error_active'
 };
 
-export const initialCards = [
-  {
-    name: 'Архыз',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
-  },
-  {
-    name: 'Челябинская область',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
-  },
-  {
-    name: 'Иваново',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
-  },
-  {
-    name: 'Камчатка',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
-  },
-  {
-    name: 'Холмогорский район',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
-  },
-  {
-    name: 'Байкал',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
-  }
-];
 

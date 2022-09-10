@@ -93,7 +93,7 @@
     </div>
   </div>
 
-  <div id="confirm" class="popup">
+  <div id="confirm" class="popup popup_type_delete-card">
     <div name="confirmDeleteCard" class="popup__container">
       <form class="popup__body" novalidate>
         <p class="popup__title popup__title_confirm">Вы уверены?</p>
@@ -104,12 +104,12 @@
   </div>
 
   <div id="update" class="popup">
-    <div name="updateAvatar" class="popup__container" novalidate>
-      <form class="popup__body">
+    <div name="updateAvatar" class="popup__container" >
+      <form id="popup-avatar" name="form3" class="popup__body" novalidate>
         <p class="popup__title">Обновить аватар</p>
         <label class="popup__label">
           <input id="link-cardd" name="avatar" placeholder="Ссылка на картинку" class="popup__input" type="url" autocomplete="off" required>
-          <span id="popup__avatarLink-input-error" class="link-card-error popup__error">Введите адрес сайта.</span>
+          <span class="link-cardd-error popup__error">Введите адрес сайта.</span>
         </label>
         <button type="submit" class="popup__button">Сохранить</button>
         <button type="button" class="popup__close"></button>

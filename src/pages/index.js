@@ -33,30 +33,11 @@ let userId;
 
 const initialData = [api.getUserInfo(), api.getInitialCards()];
 
-
-const popupWithImage = new PopupWithImage(elementImage);
+// elementImage
+const popupWithImage = new PopupWithImage('.popup_type_image');
 popupWithImage.setEventListeners();
 
-//открытие фото
-/*const openImagePopup = (data) => {
-  const dataa = {
-   link: data.target.src,
-    name: data.target
-      .closest(".element__list")
-      .querySelector(".element__title").textContent,
-  };
-  popupWithImage.open(dataa);
-   console.log(dataa);
-};
 
-
-const deleteCard = (data) => {
-  deleteCardPopup.data = data;
-  deleteCardPopup.open();
-};
-*/
-
-//////////////////////////////////////////////////
 const createCard = (data) => {
   const card = new Card({ 
     data: data,
@@ -100,16 +81,10 @@ const createCard = (data) => {
   const cardElement = card.generateCard();
   return cardElement;
 };
-///////////////////////////////////////////////////
-//* Попап удаления карточки
-const deleteCardPopup = new PopupWithConfirmation(cardDeletePopup);
-deleteCardPopup.setEventListeners();
 
-/*const section = new Section({ renderItems: (data) => {
-  section.addItem(createCard(data));
-}
-}, elementTable
-);*/
+//* Попап удаления карточки cardDeletePopup
+const deleteCardPopup = new PopupWithConfirmation('.popup_type_delete-card');
+deleteCardPopup.setEventListeners();
 
 const section = new Section({
   renderItems: (card) => {
@@ -120,8 +95,8 @@ const section = new Section({
 const userInfo = new UserInfo( '.profile__name', '.profile__description', '.profile__avatar');
 
 
-//Попап редактирования профиля
- const popupEdit = new PopupWithForm(profileEdit, { 
+//Попап редактирования профиля profileEdit
+ const popupEdit = new PopupWithForm('.popup_type_edit', {
   submitForm: (data) => {
     popupEdit.loading(true);
     api.editProfile(data)
@@ -139,8 +114,8 @@ const userInfo = new UserInfo( '.profile__name', '.profile__description', '.prof
  });
 popupEdit.setEventListeners();
 
-//* Попап добавления карточки
-const addNewCardPopup = new PopupWithForm(newCard, { 
+//* Попап добавления карточки newCard
+const addNewCardPopup = new PopupWithForm('.popup_type_new-card', {
   submitForm: (data) => {
     addNewCardPopup.loading(true);
     api.addNewCard(data)
@@ -160,8 +135,8 @@ const addNewCardPopup = new PopupWithForm(newCard, {
 addNewCardPopup.setEventListeners();
 
 
-// Попап редактирования аватарки
-const avatarEdit = new PopupWithForm(avatarEditPopup, {
+// Попап редактирования аватарки avatarEditPopup
+const avatarEdit = new PopupWithForm('.popup_type_avatar', {
   submitForm: (data) => {
     avatarEdit.loading(true);
     api
